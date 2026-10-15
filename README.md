@@ -4,7 +4,7 @@ A free, no-login web tool that turns a list of repair orders into a clear pictur
 
 It runs entirely in the browser. Your file is read on your own computer and is never uploaded anywhere.
 
-**Live demo:** _add your GitHub Pages link here_
+**Live demo:** _https://tsoybay.github.io/service-kpi-dashboard/_
 
 ![Screenshot of the Service KPI Dashboard](screenshot.png)
 
@@ -136,13 +136,6 @@ node tests.js
 ```
 
 The tests check every number against a small set of repair orders worked out by hand, and check how messy files are handled: semicolons, bad dates, missing columns, extra columns and empty files. They also load the three sample files and check that each one behaves as described in this README.
-
-## Publish with GitHub Pages
-
-1. Push these files to a new public repository on your GitHub account.
-2. Open **Settings, then Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, pick `main` and `/ (root)`, then save.
-4. After a minute or two your site is live at `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`. Paste that link at the top of this README.
 
 ## Roadmap
 
