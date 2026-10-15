@@ -6,7 +6,7 @@ It runs entirely in the browser. Your file is read on your own computer and is n
 
 **Live demo:** _https://tsoybay.github.io/service-kpi-dashboard/_
 
-![Screenshot of the Service KPI Dashboard](screenshot.png)
+![Screenshot of the Service KPI Dashboard](screenshot1.png)
 
 ## What it shows
 
