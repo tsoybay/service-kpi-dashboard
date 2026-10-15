@@ -1,0 +1,40 @@
+RO,Opened,Completed,Tech,Job type,Notes
+7001,2026-08-03 09:46,2026-08-03 11:18,Technician C,Tire swap,
+7002,2026-08-03 10:08,2026-08-03 11:37,Technician C,Tire swap,
+7003,2026-08-03 11:02,2026-08-03 16:10,Technician B,Brakes,
+7004,2026-08-03 11:45,2026-08-03 15:20,Technician B,Inspection,Approved by phone
+7099,08/05/2026 09:15,2026-08-05 11:00,Technician A,Oil change,Date typed month/day/year
+7005,2026-08-04 12:06,2026-08-04 13:34,Technician C,Oil change,
+7006,2026-08-04 12:17,2026-08-04 17:20,Technician C,Brakes,Customer waiting
+7007,2026-08-04 08:30,2026-08-04 09:51,Technician A,Tire swap,
+7008,2026-08-04 10:06,2026-08-04 12:35,Technician C,Oil change,Customer waiting
+7009,2026-08-05 11:37,2026-08-05 14:14,Technician C,Inspection,Approved by phone
+7100,2026-08-06,2026-08-06 15:00,Technician B,Brakes,No time of day
+7010,2026-08-05 10:48,2026-08-05 13:52,Technician B,Brakes,
+7011,2026-08-05 09:34,2026-08-05 11:22,Technician B,Inspection,Parts on order
+7012,2026-08-05 10:17,2026-08-05 12:22,Technician B,Oil change,
+7013,2026-08-06 08:02,2026-08-06 10:27,Technician C,Oil change,
+7014,2026-08-06 09:57,2026-08-06 17:00,Technician A,Brakes,
+7101,2026-08-07 13:00,2026-08-07 10:30,Technician C,Tire swap,Finished before it opened
+7015,2026-08-06 08:43,2026-08-06 12:51,Technician B,Brakes,
+7016,2026-08-06 09:05,2026-08-06 11:03,Technician B,Oil change,
+7017,2026-08-07 09:49,2026-08-07 13:51,Technician B,Brakes,
+7018,2026-08-07 08:25,2026-08-07 09:49,Technician B,Inspection,
+7019,2026-08-07 10:37,2026-08-07 13:20,Technician B,Inspection,Parts on order
+,2026-08-10 09:00,2026-08-10 10:00,Technician A,Inspection,Missing RO number
+7020,2026-08-07 09:01,2026-08-07 10:23,Technician A,Oil change,
+7021,2026-08-10 08:05,2026-08-10 09:12,Technician A,Tire swap,
+7022,2026-08-10 11:31,2026-08-10 13:57,Technician C,Inspection,Approved by phone
+7023,2026-08-10 09:55,2026-08-10 12:39,Technician B,Inspection,
+7024,2026-08-10 08:10,2026-08-10 11:02,Technician B,Brakes,Customer waiting
+7102,2026-08-11 08:30,,Technician B,Diagnostics,Not finished yet
+7025,2026-08-11 12:51,2026-08-11 14:04,Technician C,Tire swap,
+7026,2026-08-11 10:51,2026-08-11 12:35,Technician A,Tire swap,Customer waiting
+7027,2026-08-11 08:11,2026-08-11 14:57,Technician A,Brakes,Customer waiting
+7028,2026-08-11 09:14,2026-08-11 11:04,Technician C,Tire swap,
+7029,2026-08-12 11:37,2026-08-12 13:38,Technician C,Tire swap,
+7004,2026-08-03 11:45,2026-08-03 15:20,Technician B,Inspection,Same RO number as an earlier row
+7103,2026-02-30 09:00,2026-02-30 11:00,Technician C,Brakes,Date that does not exist
+7030,2026-08-12 12:16,2026-08-12 14:01,Technician A,Tire swap,
+7031,2026-08-12 10:25,2026-08-12 12:13,Technician C,Tire swap,
+7032,2026-08-12 08:04,2026-08-12 09:45,Technician B,Oil change,

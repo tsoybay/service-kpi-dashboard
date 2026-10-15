@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service KPI Dashboard</title>
+  <meta name="description" content="Load a list of repair orders and see how a service department is performing: cars completed, turnaround time and workload per technician. Runs in your browser.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <header class="masthead">
+      <h1>Service KPI dashboard</h1>
+      <p>See how a service department is performing: cars completed, how long each job takes, and how the work is shared between technicians. Upload a CSV of repair orders, or load sample data from a fictional shop to see how it works.</p>
+    </header>
+
+    <main>
+      <section class="plate" id="drop-zone" aria-labelledby="source-title">
+        <h2 id="source-title" class="plate-title">Your data</h2>
+        <p class="plate-text">Each row of the CSV is one repair order. Drag a file onto this plate or use the button.</p>
+
+        <div class="actions">
+          <label class="btn primary file-btn" for="file-input">
+            Upload CSV
+            <input type="file" id="file-input" accept=".csv,text/csv,text/plain">
+          </label>
+          <button type="button" class="btn" id="sample-btn">Load sample data</button>
+          <button type="button" class="btn quiet" id="template-btn">Download sample CSV (template)</button>
+        </div>
+
+        <p class="plate-meta">Your file is read in your browser. Nothing is uploaded or sent anywhere.</p>
+
+        <details class="columns">
+          <summary>Which columns does the CSV need?</summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">Column</th><th scope="col">What goes in it</th><th scope="col">Example</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">RO number</th><td>The repair order number</td><td>10482</td></tr>
+                <tr><th scope="row">Opened</th><td>When the car checked in</td><td>2026-07-06 08:15</td></tr>
+                <tr><th scope="row">Completed</th><td>When the work finished</td><td>2026-07-06 13:20</td></tr>
+                <tr><th scope="row">Technician</th><td>Name or ID</td><td>Technician 3</td></tr>
+                <tr><th scope="row">Service type</th><td>The kind of job</td><td>Brake service</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="columns-note">Dates need the year first and a time: <strong>YYYY-MM-DD HH:MM</strong>. Any other columns in your file are ignored. Common alternative column names (such as Tech or Job type) are recognized, and files saved with semicolons, as French-language Excel does, are read correctly.</p>
+        </details>
+      </section>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <p id="start-hint" class="start-hint">Nothing is loaded yet. Upload a CSV, or load the sample data to see how the dashboard works.</p>
+      <div id="source-note"></div>
+
+      <div id="dashboard" hidden>
+
+        <form class="filters" id="filters" aria-label="Filters" onsubmit="return false">
+          <div class="field">
+            <label for="f-from">From</label>
+            <input type="date" id="f-from">
+          </div>
+          <div class="field">
+            <label for="f-to">To</label>
+            <input type="date" id="f-to">
+          </div>
+          <div class="field">
+            <label for="f-tech">Technician</label>
+            <select id="f-tech"></select>
+          </div>
+          <div class="field">
+            <label for="f-service">Service type</label>
+            <select id="f-service"></select>
+          </div>
+          <button type="button" class="btn quiet" id="reset-filters">Reset filters</button>
+        </form>
+        <p class="filters-note" id="filters-note">Dates filter by when each repair order was completed.</p>
+
+        <p id="context-line" class="context-line"></p>
+
+        <p id="empty-state" class="empty" hidden>No repair orders match these filters. Widen the date range or set Technician and Service type back to All.</p>
+
+        <div id="content">
+          <div class="actions toolbar">
+            <button type="button" class="btn" id="copy-summary-btn">Copy summary</button>
+            <button type="button" class="btn" id="print-btn">Print</button>
+          </div>
+
+          <section id="kpis" class="kpis" aria-label="Key numbers"></section>
+
+          <section class="section" aria-labelledby="daily-title">
+            <h2 id="daily-title">Cars completed</h2>
+            <p id="daily-caption"></p>
+            <div class="segmented" id="grouping" role="group" aria-label="Show bars by">
+              <button type="button" class="seg" data-grouping="day">By day</button>
+              <button type="button" class="seg" data-grouping="week">By week</button>
+            </div>
+            <p class="grouping-note" id="grouping-note"></p>
+            <div id="daily-chart" class="chart"></div>
+          </section>
+
+          <section class="section" aria-labelledby="service-title">
+            <h2 id="service-title">Turnaround by service type</h2>
+            <p>Average time from check-in to completion. The number in brackets is how many repair orders each bar is based on.</p>
+            <div id="service-chart" class="chart"></div>
+          </section>
+
+          <section class="section" aria-labelledby="tech-title">
+            <h2 id="tech-title">Technicians</h2>
+            <p>How the work is shared. Average turnaround includes time spent waiting in the queue, so it does not measure how fast each technician works. Click a column heading to sort.</p>
+            <div class="table-wrap">
+              <table id="tech-table" class="data">
+                <thead id="tech-head"></thead>
+                <tbody id="tech-body"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="slow-title">
+            <h2 id="slow-title">Longest turnarounds</h2>
+            <p id="slow-caption"></p>
+            <div class="table-wrap" id="slow-wrap"></div>
+            <div class="actions" id="slow-actions"></div>
+          </section>
+
+          <section class="section" aria-labelledby="about-title">
+            <h2 id="about-title">About these numbers</h2>
+
+            <details class="info">
+              <summary>How is each number calculated?</summary>
+              <dl class="definitions">
+                <dt>Cars per working day</dt>
+                <dd>Repair orders completed, divided by the number of days that had at least one completion. Days when the shop was closed do not pull the average down.</dd>
+
+                <dt>Turnaround</dt>
+                <dd>Completed minus Opened, in calendar hours, so nights and weekends count. The median is the middle value, which a few very long jobs do not distort.</dd>
+
+                <dt>Share of orders</dt>
+                <dd>A technician's repair orders as a share of all the repair orders shown.</dd>
+              </dl>
+              <p class="columns-note">This version needs only five columns, so it does not measure on-time rate, first-time fixes or technician efficiency.</p>
+            </details>
+
+            <details class="info" id="quality">
+              <summary>Data quality</summary>
+              <div id="quality-body"></div>
+            </details>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>The sample data is fictional and generated by code with a fixed seed. It does not describe any real shop, technician or customer. For information only.</p>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

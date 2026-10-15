@@ -1,0 +1,394 @@
+/* Service KPI Dashboard
+   Same family as the VIN decoder: steel background, riveted plate, road-sign green.
+   The plate holds the data controls. The key numbers sit in one instrument cluster,
+   separated by thin rules, instead of a row of identical cards. */
+
+:root {
+  --steel: #d3d9de;
+  --plate: #eef1f3;
+  --edge: #1b2733;
+  --ink: #16202a;
+  --ink-soft: #46535f;
+  --line: #aeb8c1;
+  --paper: #f7f8f9;
+  --green: #0b6b4f;
+  --amber: #7a4a00;
+  --amber-bg: #fbefd9;
+  --alert: #a32119;
+  --alert-bg: #fbe4e1;
+
+  --display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--steel);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 16px 72px;
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead h1 {
+  margin: 0 0 10px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 7vw, 3.1rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.masthead p {
+  margin: 0 0 24px;
+  max-width: 62ch;
+  color: var(--ink-soft);
+}
+
+/* ---------- The plate ---------- */
+
+.plate {
+  position: relative;
+  padding: 24px 24px 20px;
+  border: 3px solid var(--edge);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 12px 12px, #8a96a1 0 3.5px, transparent 4.5px),
+    radial-gradient(circle at calc(100% - 12px) 12px, #8a96a1 0 3.5px, transparent 4.5px),
+    radial-gradient(circle at 12px calc(100% - 12px), #8a96a1 0 3.5px, transparent 4.5px),
+    radial-gradient(circle at calc(100% - 12px) calc(100% - 12px), #8a96a1 0 3.5px, transparent 4.5px),
+    var(--plate);
+  box-shadow: 0 2px 0 rgba(22, 32, 42, 0.18);
+}
+
+.plate.dragging { outline: 4px dashed var(--green); outline-offset: 4px; }
+
+.plate-title {
+  margin: 0 0 4px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.plate-text { margin: 0 0 16px; max-width: 62ch; color: var(--ink-soft); }
+
+.plate-meta { margin: 14px 0 0; font-size: 0.9rem; color: var(--ink-soft); }
+
+/* ---------- Buttons ---------- */
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.btn {
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn:hover { background: rgba(22, 32, 42, 0.07); }
+.btn.primary { background: var(--green); border-color: var(--green); color: #fff; }
+.btn.primary:hover { background: #095a42; }
+.btn.quiet { border-color: transparent; text-decoration: underline; }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* The file input sits inside its label button, visually hidden but still focusable. */
+.file-btn { position: relative; }
+.file-btn input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.file-btn:focus-within { outline: 3px solid var(--green); outline-offset: 2px; }
+.btn.primary.file-btn:focus-within { outline-color: var(--ink); }
+
+:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+.btn.primary:focus-visible { outline-color: var(--ink); }
+
+/* ---------- Column help inside the plate ---------- */
+
+.columns { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+.columns summary, .info summary { cursor: pointer; font-weight: 600; }
+.columns-note { max-width: 70ch; margin: 12px 0 0; font-size: 0.95rem; color: var(--ink-soft); }
+
+/* ---------- Messages ---------- */
+
+.status {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border-left: 5px solid var(--ink-soft);
+  background: rgba(255, 255, 255, 0.6);
+}
+.status:empty { display: none; }
+.status.error { border-left-color: var(--alert); background: var(--alert-bg); }
+.status p { margin: 0; }
+.status p + p { margin-top: 6px; }
+
+.start-hint { margin: 18px 0 0; max-width: 62ch; color: var(--ink-soft); }
+.start-hint[hidden] { display: none; }
+
+.note {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  border-left: 5px solid var(--green);
+  background: rgba(255, 255, 255, 0.6);
+}
+.note.sample { border-left-color: var(--amber); background: var(--amber-bg); color: var(--amber); font-weight: 500; }
+.note.warn { border-left-color: var(--amber); background: var(--amber-bg); color: var(--amber); font-weight: 500; }
+.note p { margin: 0; }
+.note p + p { margin-top: 4px; }
+
+.empty {
+  margin: 20px 0 0;
+  padding: 12px 14px;
+  border-left: 5px solid var(--amber);
+  background: var(--amber-bg);
+  color: var(--amber);
+  font-weight: 500;
+}
+
+/* ---------- Filters ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px 16px;
+  margin-top: 26px;
+}
+
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); }
+
+.field input, .field select {
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1rem;
+}
+.field select { min-width: 170px; }
+
+/* Controls with nothing to choose between are switched off and look it. */
+.field input:disabled, .field select:disabled {
+  background: #e4e8eb;
+  border-color: var(--line);
+  color: var(--ink-soft);
+  cursor: not-allowed;
+}
+
+.filters-note { margin: 8px 0 0; max-width: 70ch; font-size: 0.875rem; color: var(--ink-soft); }
+.context-line { margin: 14px 0 0; font-weight: 600; }
+
+/* ---------- Key numbers: one instrument cluster ---------- */
+
+.toolbar { margin-top: 18px; }
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  margin-top: 18px;
+  border: 3px solid var(--edge);
+  border-radius: 12px;
+  background: var(--plate);
+  overflow: hidden;
+}
+
+/* Each cell draws its own right and bottom rule. The negative margins push the outer
+   rules out of view, so the panel has dividers inside and no stray lines at the edge. */
+.kpi {
+  margin: 0 -1px -1px 0;
+  padding: 14px 16px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.kpi-label { font-size: 0.95rem; font-weight: 600; color: var(--ink-soft); }
+
+.kpi-value {
+  margin: 2px 0 2px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 2.9rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.kpi-sub { font-size: 0.875rem; color: var(--ink-soft); }
+
+/* ---------- Sections ---------- */
+
+.section { margin-top: 34px; padding-top: 12px; border-top: 3px solid var(--ink); }
+
+.section h2 {
+  margin: 0 0 8px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.1;
+}
+
+.section > p { max-width: 66ch; margin: 0 0 14px; color: var(--ink-soft); }
+
+/* ---------- Day / week switch ---------- */
+
+.segmented {
+  display: inline-flex;
+  margin: 0 0 6px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.seg {
+  min-height: 40px;
+  padding: 8px 18px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.seg + .seg { border-left: 2px solid var(--ink); }
+.seg[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.seg:not(:disabled):not([aria-pressed="true"]):hover { background: rgba(22, 32, 42, 0.07); }
+.seg:disabled { opacity: 0.45; cursor: not-allowed; }
+.seg:focus-visible { outline-offset: -5px; }
+
+.section > .grouping-note { margin: 4px 0 10px; font-size: 0.9rem; }
+.section > .grouping-note:empty { display: none; }
+
+/* ---------- Charts ---------- */
+
+.chart { width: 100%; }
+.chart svg { display: block; max-width: 100%; height: auto; }
+
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .axis { stroke: var(--ink); stroke-width: 1.5; }
+.chart .axis-text { fill: var(--ink-soft); font-family: var(--body); font-size: 12px; }
+.chart .label-text { fill: var(--ink); font-family: var(--body); font-size: 13px; }
+.chart .value-text { fill: var(--ink); font-family: var(--body); font-size: 13px; font-weight: 600; }
+.chart .bar { fill: var(--green); }
+.chart .bar:hover { fill: #095a42; }
+
+/* ---------- Tables ---------- */
+
+.table-wrap { max-width: 100%; overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+
+th, td { padding: 9px 12px 9px 0; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { border-bottom: 2px solid var(--ink); font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+tbody th { font-weight: 600; }
+
+table.data .num, table.data th.num { text-align: right; padding-right: 16px; }
+
+/* Keep each row on one line and let the table scroll sideways on small screens.
+   The first column stays in view so you always know which row you are reading. */
+table.data th, table.data td { white-space: nowrap; }
+table.data tbody th {
+  position: sticky;
+  left: 0;
+  padding-right: 14px;
+  background: var(--steel);
+}
+
+.sort-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sort-btn:hover { color: var(--ink); text-decoration: underline; }
+th.num .sort-btn { justify-content: flex-end; }
+.sort-arrow { display: inline-block; width: 0.8em; }
+
+.share-cell { min-width: 150px; }
+.share-value { display: block; text-align: right; }
+
+.share-track {
+  height: 6px;
+  margin-top: 4px;
+  background: #dfe4e8;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.share-fill { height: 100%; background: var(--green); border-radius: 3px; }
+
+/* ---------- Details panels ---------- */
+
+.info { margin: 0 0 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
+.info[open] summary { margin-bottom: 10px; }
+
+.definitions { margin: 0; }
+.definitions dt { margin-top: 12px; font-weight: 600; }
+.definitions dt:first-child { margin-top: 0; }
+.definitions dd { margin: 2px 0 0; max-width: 66ch; color: var(--ink-soft); }
+
+#quality-body p { margin: 0 0 6px; max-width: 66ch; }
+#quality-body ul { margin: 6px 0 0; padding-left: 20px; }
+
+.footer { margin-top: 48px; font-size: 0.875rem; color: var(--ink-soft); max-width: 66ch; }
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 560px) {
+  .plate { padding: 22px 16px 18px; }
+  .btn { flex: 1 1 auto; }
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .kpi { padding: 12px 12px; }
+  .field { flex: 1 1 140px; }
+  .field select, .field input { width: 100%; min-width: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Print: the report only ---------- */
+
+@media print {
+  body { background: #fff; }
+  .plate, .status, .filters, .filters-note, .toolbar, .btn, .segmented, .grouping-note, .masthead p, #slow-actions { display: none !important; }
+  .page { padding: 0; max-width: none; }
+  .kpis { break-inside: avoid; }
+  .section { break-inside: avoid; }
+  .info { border: 0; padding: 0; }
+}

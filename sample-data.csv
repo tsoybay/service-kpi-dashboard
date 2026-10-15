@@ -1,0 +1,293 @@
+RO number,Opened,Completed,Technician,Service type
+10001,2026-07-06 07:30,2026-07-06 08:55,Technician 6,Tire swap
+10002,2026-07-06 08:03,2026-07-06 12:48,Technician 4,Scheduled maintenance
+10003,2026-07-06 08:28,2026-07-06 09:38,Technician 1,Oil change and inspection
+10004,2026-07-06 09:48,2026-07-06 12:11,Technician 6,Scheduled maintenance
+10005,2026-07-06 09:55,2026-07-06 15:12,Technician 5,Scheduled maintenance
+10006,2026-07-06 11:24,2026-07-06 15:48,Technician 6,Warranty repair
+10007,2026-07-07 09:55,2026-07-07 12:38,Technician 4,Scheduled maintenance
+10008,2026-07-07 10:52,2026-07-07 13:21,Technician 6,Oil change and inspection
+10009,2026-07-07 11:22,2026-07-07 13:04,Technician 6,Oil change and inspection
+10010,2026-07-07 13:00,2026-07-08 07:38,Technician 6,Scheduled maintenance
+10011,2026-07-08 07:30,2026-07-08 13:40,Technician 3,Warranty repair
+10012,2026-07-08 08:45,2026-07-08 14:38,Technician 2,Brake service
+10013,2026-07-08 10:58,2026-07-08 14:57,Technician 5,Tire swap
+10014,2026-07-08 13:06,2026-07-08 16:03,Technician 1,Diagnostics
+10015,2026-07-08 14:20,2026-07-10 09:18,Technician 1,Brake service
+10016,2026-07-09 07:36,2026-07-09 12:33,Technician 1,Warranty repair
+10017,2026-07-09 08:04,2026-07-09 10:49,Technician 4,Scheduled maintenance
+10018,2026-07-09 08:25,2026-07-09 10:52,Technician 1,Tire swap
+10019,2026-07-09 08:41,2026-07-09 11:29,Technician 3,Scheduled maintenance
+10020,2026-07-09 09:10,2026-07-09 11:04,Technician 4,Tire swap
+10021,2026-07-09 14:55,2026-07-10 12:16,Technician 1,Warranty repair
+10022,2026-07-10 07:39,2026-07-10 09:08,Technician 5,Oil change and inspection
+10023,2026-07-10 07:46,2026-07-10 08:40,Technician 1,Oil change and inspection
+10024,2026-07-10 07:56,2026-07-10 09:42,Technician 3,Oil change and inspection
+10025,2026-07-10 08:03,2026-07-10 14:15,Technician 2,Scheduled maintenance
+10026,2026-07-10 08:29,2026-07-10 13:55,Technician 2,Scheduled maintenance
+10027,2026-07-10 08:34,2026-07-10 10:02,Technician 3,Oil change and inspection
+10028,2026-07-10 08:48,2026-07-13 11:16,Technician 3,Warranty repair
+10029,2026-07-11 09:23,2026-07-11 11:25,Technician 3,Tire swap
+10030,2026-07-11 10:30,2026-07-11 12:29,Technician 5,Oil change and inspection
+10031,2026-07-13 07:49,2026-07-13 13:24,Technician 5,Scheduled maintenance
+10032,2026-07-13 09:05,2026-07-13 11:58,Technician 5,Oil change and inspection
+10033,2026-07-13 09:11,2026-07-13 13:11,Technician 1,Scheduled maintenance
+10034,2026-07-13 12:44,2026-07-13 14:30,Technician 1,Diagnostics
+10035,2026-07-13 13:52,2026-07-14 11:52,Technician 5,Oil change and inspection
+10036,2026-07-13 14:44,2026-07-14 08:31,Technician 6,Brake service
+10037,2026-07-13 14:45,2026-07-14 07:37,Technician 4,Brake service
+10038,2026-07-14 07:57,2026-07-14 11:56,Technician 3,Brake service
+10039,2026-07-14 08:09,2026-07-14 13:15,Technician 4,Brake service
+10040,2026-07-14 08:30,2026-07-14 12:26,Technician 5,Diagnostics
+10041,2026-07-14 08:35,2026-07-15 10:51,Technician 2,Brake service
+10042,2026-07-14 09:04,2026-07-14 10:19,Technician 3,Tire swap
+10043,2026-07-14 09:40,2026-07-15 11:43,Technician 6,Warranty repair
+10044,2026-07-15 07:38,2026-07-15 11:36,Technician 4,Brake service
+10045,2026-07-15 07:53,2026-07-15 11:18,Technician 2,Oil change and inspection
+10046,2026-07-15 08:37,2026-07-15 14:06,Technician 2,Scheduled maintenance
+10047,2026-07-15 14:25,2026-07-16 07:51,Technician 5,Oil change and inspection
+10048,2026-07-16 08:18,2026-07-16 12:51,Technician 3,Warranty repair
+10049,2026-07-16 09:06,2026-07-16 10:53,Technician 4,Oil change and inspection
+10050,2026-07-16 09:18,2026-07-16 13:29,Technician 1,Brake service
+10051,2026-07-16 09:55,2026-07-16 16:36,Technician 3,Warranty repair
+10052,2026-07-16 10:29,2026-07-16 11:55,Technician 4,Tire swap
+10053,2026-07-16 11:33,2026-07-16 13:51,Technician 5,Diagnostics
+10054,2026-07-17 07:44,2026-07-17 10:34,Technician 1,Oil change and inspection
+10055,2026-07-17 08:27,2026-07-17 10:37,Technician 6,Tire swap
+10056,2026-07-17 08:28,2026-07-17 11:39,Technician 6,Warranty repair
+10057,2026-07-17 08:39,2026-07-17 13:20,Technician 6,Scheduled maintenance
+10058,2026-07-17 10:00,2026-07-17 13:11,Technician 5,Scheduled maintenance
+10059,2026-07-18 10:06,2026-07-20 12:04,Technician 3,Diagnostics
+10060,2026-07-18 10:13,2026-07-20 08:17,Technician 5,Oil change and inspection
+10061,2026-07-18 10:30,2026-07-18 12:26,Technician 3,Tire swap
+10062,2026-07-20 07:45,2026-07-20 10:22,Technician 6,Oil change and inspection
+10063,2026-07-20 08:02,2026-07-20 16:50,Technician 1,Brake service
+10064,2026-07-20 08:06,2026-07-20 10:13,Technician 3,Tire swap
+10065,2026-07-20 08:11,2026-07-20 12:23,Technician 6,Warranty repair
+10066,2026-07-20 08:37,2026-07-20 12:25,Technician 4,Scheduled maintenance
+10067,2026-07-20 08:42,2026-07-20 11:19,Technician 5,Tire swap
+10068,2026-07-20 09:19,2026-07-20 12:03,Technician 2,Tire swap
+10069,2026-07-20 14:46,2026-07-20 16:12,Technician 2,Tire swap
+10070,2026-07-21 08:46,2026-07-21 16:23,Technician 2,Warranty repair
+10071,2026-07-21 09:11,2026-07-21 12:36,Technician 6,Scheduled maintenance
+10072,2026-07-21 09:14,2026-07-21 12:52,Technician 2,Oil change and inspection
+10073,2026-07-21 09:49,2026-07-21 11:59,Technician 6,Oil change and inspection
+10074,2026-07-21 09:59,2026-07-21 11:33,Technician 4,Oil change and inspection
+10075,2026-07-21 12:17,2026-07-21 16:44,Technician 2,Scheduled maintenance
+10076,2026-07-21 12:57,2026-07-21 15:15,Technician 2,Oil change and inspection
+10077,2026-07-21 13:28,2026-07-21 15:59,Technician 5,Tire swap
+10078,2026-07-22 07:41,2026-07-22 08:58,Technician 6,Oil change and inspection
+10079,2026-07-22 08:13,2026-07-22 09:15,Technician 1,Tire swap
+10080,2026-07-22 08:25,2026-07-22 09:56,Technician 2,Oil change and inspection
+10081,2026-07-22 08:26,2026-07-22 12:36,Technician 4,Warranty repair
+10082,2026-07-22 09:03,2026-07-22 13:15,Technician 2,Scheduled maintenance
+10083,2026-07-22 09:16,2026-07-23 11:17,Technician 5,Warranty repair
+10084,2026-07-22 11:08,2026-07-22 13:01,Technician 5,Oil change and inspection
+10085,2026-07-23 09:07,2026-07-23 12:07,Technician 3,Oil change and inspection
+10086,2026-07-23 09:35,2026-07-23 14:56,Technician 4,Scheduled maintenance
+10087,2026-07-23 10:07,2026-07-23 12:07,Technician 4,Tire swap
+10088,2026-07-23 11:25,2026-07-23 14:53,Technician 6,Tire swap
+10089,2026-07-23 13:17,2026-07-23 16:00,Technician 5,Tire swap
+10090,2026-07-23 14:44,2026-07-23 17:03,Technician 4,Oil change and inspection
+10091,2026-07-24 07:32,2026-07-24 08:51,Technician 5,Oil change and inspection
+10092,2026-07-24 07:38,2026-07-24 09:05,Technician 4,Oil change and inspection
+10093,2026-07-24 08:15,2026-07-24 10:33,Technician 1,Brake service
+10094,2026-07-24 08:24,2026-07-24 14:58,Technician 6,Warranty repair
+10095,2026-07-24 09:23,2026-07-24 13:29,Technician 1,Warranty repair
+10096,2026-07-24 09:28,2026-07-24 15:56,Technician 2,Brake service
+10097,2026-07-24 09:50,2026-07-24 11:22,Technician 5,Tire swap
+10098,2026-07-25 09:11,2026-07-25 12:11,Technician 6,Oil change and inspection
+10099,2026-07-25 10:16,2026-07-27 08:33,Technician 4,Scheduled maintenance
+10100,2026-07-25 10:30,2026-07-27 11:02,Technician 6,Warranty repair
+10101,2026-07-27 08:04,2026-07-27 13:20,Technician 6,Scheduled maintenance
+10102,2026-07-27 08:26,2026-07-27 11:11,Technician 2,Oil change and inspection
+10103,2026-07-27 08:31,2026-07-27 10:24,Technician 2,Tire swap
+10104,2026-07-27 09:01,2026-07-27 11:52,Technician 2,Brake service
+10105,2026-07-27 09:01,2026-07-27 12:13,Technician 6,Brake service
+10106,2026-07-27 09:27,2026-07-27 10:41,Technician 3,Oil change and inspection
+10107,2026-07-27 12:02,2026-07-27 13:38,Technician 2,Tire swap
+10108,2026-07-27 14:37,2026-07-27 16:42,Technician 1,Tire swap
+10109,2026-07-28 08:36,2026-07-28 11:02,Technician 4,Oil change and inspection
+10110,2026-07-28 08:48,2026-07-28 11:43,Technician 1,Brake service
+10111,2026-07-28 09:00,2026-07-29 08:54,Technician 3,Diagnostics
+10112,2026-07-28 09:34,2026-07-28 16:59,Technician 2,Warranty repair
+10113,2026-07-28 09:42,2026-07-28 15:12,Technician 3,Brake service
+10114,2026-07-28 12:33,2026-07-29 09:56,Technician 5,Warranty repair
+10115,2026-07-28 13:16,2026-07-28 15:27,Technician 2,Oil change and inspection
+10116,2026-07-29 08:36,2026-07-30 10:41,Technician 2,Brake service
+10117,2026-07-29 09:03,2026-07-29 12:57,Technician 1,Scheduled maintenance
+10118,2026-07-29 09:35,2026-07-29 11:24,Technician 5,Oil change and inspection
+10119,2026-07-29 09:44,2026-07-29 14:12,Technician 6,Scheduled maintenance
+10120,2026-07-29 09:48,2026-07-29 12:02,Technician 4,Brake service
+10121,2026-07-29 10:30,2026-07-30 07:37,Technician 4,Warranty repair
+10122,2026-07-30 07:33,2026-07-30 10:21,Technician 6,Brake service
+10123,2026-07-30 07:35,2026-07-30 11:34,Technician 6,Scheduled maintenance
+10124,2026-07-30 07:36,2026-07-30 09:15,Technician 2,Tire swap
+10125,2026-07-30 09:29,2026-07-30 11:38,Technician 1,Oil change and inspection
+10126,2026-07-30 09:51,2026-07-30 11:04,Technician 1,Oil change and inspection
+10127,2026-07-30 13:27,2026-07-30 15:41,Technician 2,Brake service
+10128,2026-07-30 14:11,2026-07-31 09:18,Technician 2,Scheduled maintenance
+10129,2026-07-31 08:32,2026-07-31 12:03,Technician 4,Warranty repair
+10130,2026-07-31 09:14,2026-07-31 11:51,Technician 1,Oil change and inspection
+10131,2026-07-31 09:50,2026-07-31 11:40,Technician 5,Oil change and inspection
+10132,2026-07-31 09:52,2026-07-31 13:38,Technician 4,Brake service
+10133,2026-07-31 12:27,2026-08-01 08:01,Technician 6,Warranty repair
+10134,2026-07-31 14:38,2026-08-01 09:53,Technician 4,Brake service
+10135,2026-07-31 14:57,2026-08-01 10:24,Technician 2,Warranty repair
+10136,2026-08-01 09:56,2026-08-01 11:16,Technician 2,Tire swap
+10137,2026-08-01 10:30,2026-08-03 08:09,Technician 3,Brake service
+10138,2026-08-03 07:39,2026-08-03 09:49,Technician 1,Oil change and inspection
+10139,2026-08-03 07:49,2026-08-03 09:16,Technician 2,Tire swap
+10140,2026-08-03 07:50,2026-08-03 12:32,Technician 6,Brake service
+10141,2026-08-03 08:22,2026-08-03 09:29,Technician 2,Oil change and inspection
+10142,2026-08-03 08:50,2026-08-03 13:28,Technician 4,Brake service
+10143,2026-08-03 10:29,2026-08-03 12:01,Technician 5,Tire swap
+10144,2026-08-03 13:16,2026-08-03 14:37,Technician 6,Oil change and inspection
+10145,2026-08-04 08:22,2026-08-04 10:58,Technician 2,Scheduled maintenance
+10146,2026-08-04 08:58,2026-08-04 11:03,Technician 5,Oil change and inspection
+10147,2026-08-04 09:35,2026-08-04 12:25,Technician 6,Scheduled maintenance
+10148,2026-08-04 09:49,2026-08-04 12:05,Technician 1,Scheduled maintenance
+10149,2026-08-04 10:36,2026-08-04 12:58,Technician 3,Diagnostics
+10150,2026-08-04 11:00,2026-08-05 10:37,Technician 1,Scheduled maintenance
+10151,2026-08-05 07:37,2026-08-05 10:33,Technician 2,Diagnostics
+10152,2026-08-05 08:39,2026-08-05 12:24,Technician 4,Scheduled maintenance
+10153,2026-08-05 09:10,2026-08-05 10:43,Technician 6,Oil change and inspection
+10154,2026-08-05 10:21,2026-08-05 16:30,Technician 6,Warranty repair
+10155,2026-08-05 11:10,2026-08-05 14:09,Technician 6,Tire swap
+10156,2026-08-05 11:11,2026-08-05 15:09,Technician 1,Brake service
+10157,2026-08-06 07:37,2026-08-06 10:15,Technician 1,Oil change and inspection
+10158,2026-08-06 08:34,2026-08-06 10:16,Technician 2,Oil change and inspection
+10159,2026-08-06 08:35,2026-08-06 12:29,Technician 1,Brake service
+10160,2026-08-06 09:30,2026-08-06 14:23,Technician 6,Scheduled maintenance
+10161,2026-08-06 09:36,2026-08-06 12:36,Technician 3,Oil change and inspection
+10162,2026-08-06 13:18,2026-08-06 15:33,Technician 1,Diagnostics
+10163,2026-08-06 13:50,2026-08-06 15:20,Technician 6,Tire swap
+10164,2026-08-07 07:32,2026-08-07 12:29,Technician 5,Scheduled maintenance
+10165,2026-08-07 08:12,2026-08-07 12:33,Technician 3,Brake service
+10166,2026-08-07 08:39,2026-08-07 11:13,Technician 2,Diagnostics
+10167,2026-08-07 08:52,2026-08-07 09:58,Technician 5,Tire swap
+10168,2026-08-07 08:55,2026-08-07 12:14,Technician 2,Scheduled maintenance
+10169,2026-08-07 09:29,2026-08-07 13:54,Technician 2,Scheduled maintenance
+10170,2026-08-07 09:36,2026-08-07 14:06,Technician 2,Scheduled maintenance
+10171,2026-08-07 09:39,2026-08-07 11:57,Technician 4,Brake service
+10172,2026-08-08 08:54,2026-08-10 08:29,Technician 3,Scheduled maintenance
+10173,2026-08-08 09:31,2026-08-08 10:50,Technician 1,Oil change and inspection
+10174,2026-08-08 10:05,2026-08-08 11:27,Technician 5,Tire swap
+10175,2026-08-08 10:26,2026-08-08 12:57,Technician 2,Tire swap
+10176,2026-08-10 07:56,2026-08-10 09:53,Technician 1,Oil change and inspection
+10177,2026-08-10 08:26,2026-08-10 10:52,Technician 3,Tire swap
+10178,2026-08-10 08:26,2026-08-10 12:07,Technician 4,Scheduled maintenance
+10179,2026-08-10 14:18,2026-08-10 17:01,Technician 4,Brake service
+10180,2026-08-10 14:51,2026-08-10 16:54,Technician 4,Tire swap
+10181,2026-08-11 07:40,2026-08-11 13:55,Technician 1,Warranty repair
+10182,2026-08-11 07:54,2026-08-11 10:02,Technician 3,Tire swap
+10183,2026-08-11 08:14,2026-08-11 12:09,Technician 3,Oil change and inspection
+10184,2026-08-11 09:42,2026-08-11 11:03,Technician 2,Tire swap
+10185,2026-08-11 13:07,2026-08-12 09:00,Technician 1,Warranty repair
+10186,2026-08-12 07:35,2026-08-12 13:13,Technician 4,Warranty repair
+10187,2026-08-12 08:07,2026-08-12 10:04,Technician 4,Oil change and inspection
+10188,2026-08-12 09:12,2026-08-12 12:53,Technician 2,Diagnostics
+10189,2026-08-12 13:08,2026-08-12 17:02,Technician 2,Scheduled maintenance
+10190,2026-08-13 08:46,2026-08-13 11:36,Technician 4,Brake service
+10191,2026-08-13 09:58,2026-08-13 11:03,Technician 1,Oil change and inspection
+10192,2026-08-13 10:24,2026-08-13 12:51,Technician 4,Brake service
+10193,2026-08-13 10:49,2026-08-14 11:53,Technician 5,Diagnostics
+10194,2026-08-14 07:31,2026-08-14 13:03,Technician 1,Diagnostics
+10195,2026-08-14 08:50,2026-08-14 10:49,Technician 2,Oil change and inspection
+10196,2026-08-14 09:48,2026-08-14 12:20,Technician 3,Tire swap
+10197,2026-08-14 11:30,2026-08-14 15:17,Technician 4,Scheduled maintenance
+10198,2026-08-14 12:19,2026-08-14 16:08,Technician 6,Scheduled maintenance
+10199,2026-08-14 13:37,2026-08-14 16:45,Technician 5,Brake service
+10200,2026-08-14 13:50,2026-08-14 15:17,Technician 5,Tire swap
+10201,2026-08-15 09:59,2026-08-17 17:07,Technician 1,Oil change and inspection
+10202,2026-08-15 10:30,2026-08-15 11:44,Technician 6,Oil change and inspection
+10203,2026-08-15 10:30,2026-08-15 12:12,Technician 3,Oil change and inspection
+10204,2026-08-17 07:44,2026-08-17 09:47,Technician 1,Oil change and inspection
+10205,2026-08-17 08:31,2026-08-17 10:07,Technician 4,Oil change and inspection
+10206,2026-08-17 09:19,2026-08-17 12:09,Technician 1,Oil change and inspection
+10207,2026-08-17 09:44,2026-08-17 12:58,Technician 6,Scheduled maintenance
+10208,2026-08-17 10:49,2026-08-17 14:05,Technician 3,Oil change and inspection
+10209,2026-08-17 12:38,2026-08-18 15:29,Technician 3,Diagnostics
+10210,2026-08-17 12:57,2026-08-18 08:42,Technician 2,Warranty repair
+10211,2026-08-18 07:56,2026-08-18 10:50,Technician 2,Brake service
+10212,2026-08-18 08:53,2026-08-18 12:20,Technician 5,Scheduled maintenance
+10213,2026-08-18 09:07,2026-08-18 11:56,Technician 1,Brake service
+10214,2026-08-18 09:52,2026-08-19 09:11,Technician 2,Oil change and inspection
+10215,2026-08-18 12:36,2026-08-18 17:11,Technician 5,Scheduled maintenance
+10216,2026-08-19 10:45,2026-08-19 12:31,Technician 3,Diagnostics
+10217,2026-08-19 10:46,2026-08-19 16:54,Technician 5,Warranty repair
+10218,2026-08-19 12:30,2026-08-20 09:04,Technician 6,Warranty repair
+10219,2026-08-19 14:54,2026-08-20 13:42,Technician 3,Warranty repair
+10220,2026-08-20 09:05,2026-08-20 11:23,Technician 2,Tire swap
+10221,2026-08-20 09:08,2026-08-20 10:31,Technician 2,Diagnostics
+10222,2026-08-20 09:11,2026-08-20 11:25,Technician 6,Oil change and inspection
+10223,2026-08-20 09:23,2026-08-20 17:25,Technician 5,Oil change and inspection
+10224,2026-08-20 13:41,2026-08-20 17:05,Technician 2,Warranty repair
+10225,2026-08-20 13:53,2026-08-20 16:09,Technician 2,Oil change and inspection
+10226,2026-08-20 14:40,2026-08-20 15:45,Technician 6,Oil change and inspection
+10227,2026-08-21 08:07,2026-08-21 14:14,Technician 5,Brake service
+10228,2026-08-21 08:46,2026-08-21 11:51,Technician 4,Oil change and inspection
+10229,2026-08-21 08:59,2026-08-22 10:07,Technician 4,Brake service
+10230,2026-08-21 09:34,2026-08-21 14:29,Technician 1,Scheduled maintenance
+10231,2026-08-21 11:42,2026-08-24 08:46,Technician 4,Diagnostics
+10232,2026-08-21 13:01,2026-08-21 14:26,Technician 4,Oil change and inspection
+10233,2026-08-22 08:49,2026-08-22 11:35,Technician 6,Oil change and inspection
+10234,2026-08-22 08:58,2026-08-22 12:12,Technician 3,Diagnostics
+10235,2026-08-22 10:30,2026-08-24 07:59,Technician 1,Scheduled maintenance
+10236,2026-08-24 07:34,2026-08-24 11:34,Technician 6,Diagnostics
+10237,2026-08-24 08:50,2026-08-24 10:56,Technician 6,Oil change and inspection
+10238,2026-08-24 09:17,2026-08-24 10:38,Technician 4,Oil change and inspection
+10239,2026-08-24 09:31,2026-08-24 14:23,Technician 3,Scheduled maintenance
+10240,2026-08-24 09:46,2026-08-24 16:34,Technician 5,Warranty repair
+10241,2026-08-24 13:48,2026-08-25 08:46,Technician 5,Scheduled maintenance
+10242,2026-08-25 07:59,2026-08-25 09:44,Technician 1,Oil change and inspection
+10243,2026-08-25 08:14,2026-08-25 12:01,Technician 1,Brake service
+10244,2026-08-25 08:29,2026-08-25 10:38,Technician 2,Oil change and inspection
+10245,2026-08-25 08:32,2026-08-25 14:23,Technician 4,Scheduled maintenance
+10246,2026-08-25 14:51,2026-08-25 16:57,Technician 2,Diagnostics
+10247,2026-08-26 07:33,2026-08-26 10:30,Technician 3,Oil change and inspection
+10248,2026-08-26 07:35,2026-08-26 10:22,Technician 5,Oil change and inspection
+10249,2026-08-26 07:55,2026-08-26 09:10,Technician 6,Oil change and inspection
+10250,2026-08-26 09:04,2026-08-26 11:12,Technician 5,Oil change and inspection
+10251,2026-08-26 09:47,2026-08-26 14:18,Technician 3,Scheduled maintenance
+10252,2026-08-26 09:52,2026-08-26 13:39,Technician 6,Scheduled maintenance
+10253,2026-08-26 11:15,2026-08-26 13:36,Technician 1,Diagnostics
+10254,2026-08-27 08:07,2026-08-27 10:10,Technician 3,Tire swap
+10255,2026-08-27 08:42,2026-08-27 11:32,Technician 5,Oil change and inspection
+10256,2026-08-27 08:46,2026-08-27 11:26,Technician 4,Diagnostics
+10257,2026-08-27 09:02,2026-08-27 12:57,Technician 6,Diagnostics
+10258,2026-08-27 09:32,2026-08-27 12:02,Technician 1,Oil change and inspection
+10259,2026-08-27 11:41,2026-08-27 15:23,Technician 5,Scheduled maintenance
+10260,2026-08-27 12:03,2026-08-27 14:44,Technician 6,Diagnostics
+10261,2026-08-27 12:38,2026-08-27 15:03,Technician 1,Oil change and inspection
+10262,2026-08-28 07:57,2026-08-28 09:46,Technician 1,Oil change and inspection
+10263,2026-08-28 07:58,2026-08-28 12:13,Technician 4,Scheduled maintenance
+10264,2026-08-28 08:36,2026-08-28 10:31,Technician 5,Oil change and inspection
+10265,2026-08-28 08:40,2026-08-28 12:47,Technician 1,Brake service
+10266,2026-08-28 13:30,2026-08-29 11:03,Technician 3,Scheduled maintenance
+10267,2026-08-28 13:32,2026-08-28 16:50,Technician 1,Scheduled maintenance
+10268,2026-08-29 08:59,2026-08-29 11:14,Technician 2,Diagnostics
+10269,2026-08-29 09:39,2026-08-29 12:19,Technician 1,Diagnostics
+10270,2026-08-29 10:30,2026-08-31 08:42,Technician 4,Brake service
+10271,2026-08-31 07:31,2026-08-31 09:11,Technician 1,Oil change and inspection
+10272,2026-08-31 08:07,2026-08-31 10:21,Technician 3,Oil change and inspection
+10273,2026-08-31 08:24,2026-09-01 08:50,Technician 1,Brake service
+10274,2026-08-31 09:21,2026-08-31 12:50,Technician 4,Scheduled maintenance
+10275,2026-09-01 07:54,2026-09-02 13:39,Technician 4,Warranty repair
+10276,2026-09-01 08:41,2026-09-01 11:50,Technician 2,Oil change and inspection
+10277,2026-09-01 09:00,2026-09-01 13:14,Technician 1,Oil change and inspection
+10278,2026-09-01 11:25,2026-09-01 13:09,Technician 1,Tire swap
+10279,2026-09-01 11:35,2026-09-01 12:55,Technician 3,Oil change and inspection
+10280,2026-09-02 07:40,2026-09-03 09:38,Technician 1,Scheduled maintenance
+10281,2026-09-02 09:06,2026-09-03 14:08,Technician 6,Warranty repair
+10282,2026-09-02 09:27,2026-09-02 14:28,Technician 6,Scheduled maintenance
+10283,2026-09-02 11:39,2026-09-02 15:37,Technician 6,Diagnostics
+10284,2026-09-02 13:42,2026-09-03 07:46,Technician 3,Oil change and inspection
+10285,2026-09-03 07:41,2026-09-03 16:33,Technician 4,Brake service
+10286,2026-09-03 07:53,2026-09-03 11:35,Technician 2,Oil change and inspection
+10287,2026-09-03 07:58,2026-09-03 10:48,Technician 5,Oil change and inspection
+10288,2026-09-03 08:31,2026-09-04 08:56,Technician 2,Oil change and inspection
+10289,2026-09-03 08:51,2026-09-03 12:55,Technician 5,Brake service
+10290,2026-09-03 09:29,2026-09-03 11:42,Technician 3,Oil change and inspection
+10291,2026-09-03 09:38,2026-09-03 11:38,Technician 6,Oil change and inspection
+10292,2026-09-03 11:17,2026-09-03 13:50,Technician 3,Oil change and inspection
